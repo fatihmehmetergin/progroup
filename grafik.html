@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>BCT General Settings 09</title>
+  <link href="https://playground.anychart.com/docs/samples/BCT_General_Settings_09/iframe" rel="canonical">
+  <meta content="Bar Chart,Column Chart,Multiple Axes" name="keywords">
+  <meta content="AnyChart - JavaScript Charts designed to be embedded and integrated" name="description">
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+  <link href="https://cdn.anychart.com/releases/8.7.1/css/anychart-ui.min.css?hcode=a0c21fc77e1449cc86299c5faa067dc4" rel="stylesheet" type="text/css">
+  <style>html, body, #container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}</style>
+ </head>
+ <body>
+
+   
+  <div id="container"></div>
+  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-exports.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-ui.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+  <script type="text/javascript">anychart.onDocumentReady(function () {
+
+var deger=25
+	var stratejik=0
+	var butce=0
+	var pazarlama=0
+	var marka=0
+	var arge=0
+	var tedarik=0
+	var bilgi=0
+	var ik=0
+	var dijital=0
+	var finans=0
+	var kurumsal=0
+
+
+  var parameters = location.search.substring(1).split("&"); 
+		var temp = parameters[0].split("="); 
+		x = unescape(temp[1]); 
+		var stratejik=parseInt(x)*2.94	
+		console.log(Math.round(stratejik*2.94))
+	   //     document.getElementById('receive1').innerHTML=x; 
+
+
+		//Bütçe Yönetimi
+		var parameters = location.search.substring(1).split("&"); 
+		var temp = parameters[1].split("="); 
+		x = unescape(temp[1]); 
+		var butce=parseInt(x)*8.33
+		console.log(Math.round(butce*8.33))
+	     //   document.getElementById('receive2').innerHTML=x; 
+
+
+		//Pazarlama
+		var parameters = location.search.substring(1).split("&"); 
+		var temp = parameters[2].split("="); 
+		x = unescape(temp[1]); 
+		var pazarlama=parseInt(x)*2.32
+		console.log(Math.round(pazarlama*2.32))
+	      //  document.getElementById('receive3').innerHTML=x;
+
+ 
+		//Marka Yönetimi
+		var parameters = location.search.substring(1).split("&"); 
+		var temp = parameters[3].split("="); 
+		x = unescape(temp[1]); 
+		var marka=parseInt(x)*3.22	
+		console.log(Math.round(marka*3.22))
+	     //   document.getElementById('receive4').innerHTML=x; 
+
+
+		//Arge ve Ürün Tasarımı
+		var parameters = location.search.substring(1).split("&"); 
+		var temp = parameters[4].split("="); 
+		x = unescape(temp[1]); 
+		var arge=parseInt(x)*5	
+		console.log(Math.round(arge*5))
+	     //   document.getElementById('receive5').innerHTML=x; 
+
+
+		//Tedarik Zinciri
+		var parameters = location.search.substring(1).split("&"); 
+		var temp = parameters[5].split("="); 
+		x = unescape(temp[1]); 
+		var tedarik=parseInt(x)*2.32	
+		console.log(Math.round(tedarik*2.32))
+	    //    document.getElementById('receive6').innerHTML=x; 
+
+
+		//Bilgi Sistemleri
+		var parameters = location.search.substring(1).split("&"); 
+		var temp = parameters[6].split("="); 
+		x = unescape(temp[1]); 
+		var bilgi=parseInt(x)*6.66	
+		console.log(Math.round(bilgi*6.66))
+	       // document.getElementById('receive7').innerHTML=x; 
+
+
+		//İnsan Kaynakları
+		var parameters = location.search.substring(1).split("&"); 
+		var temp = parameters[7].split("="); 
+		x = unescape(temp[1]); 
+		var ik=parseInt(x)*3.84	
+		console.log(Math.round(ik*3.84))
+	      //  document.getElementById('receive8').innerHTML=x; 
+
+
+		//Dijitalleşme
+		var parameters = location.search.substring(1).split("&"); 
+		var temp = parameters[8].split("="); 
+		x = unescape(temp[1]); 
+		var dijital=parseInt(x)*10	
+		console.log(Math.round(dijital*10))
+	      //  document.getElementById('receive9').innerHTML=x; 
+
+
+		//Finans
+		var parameters = location.search.substring(1).split("&"); 
+		var temp = parameters[9].split("="); 
+		x = unescape(temp[1]); 
+		var finans=parseInt(x)*3.33	
+		console.log(Math.round(finans*3.33))
+	      //  document.getElementById('receive10').innerHTML=x; 
+
+
+		//Kurumsal Yönetişim
+		var parameters = location.search.substring(1).split("&"); 
+		var temp = parameters[10].split("="); 
+		x = unescape(temp[1]);
+		var kurumsal=parseInt(x)*4.16	
+		console.log(Math.round(kurumsal*4.16))
+
+
+    // create a data set
+    var data = anychart.data.set([
+      ["Pazarlama", pazarlama],
+      ["Marka Yönetimi", marka],
+      ["Strateji", stratejik],
+      ["Tedarik Zinciri", tedarik],
+      ["Finans Yönetimi", finans],
+      ["İK Yönetimi", ik],
+      ["Kurumsal Yönetişim", kurumsal],
+      ["Arge", arge],
+      ["Bilgi Sistemleri", bilgi],
+      ["Dijitalleşme", dijital]
+     
+
+      
+    ]);
+
+    // map the data
+    var seriesData_1 = data.mapAs({x: 0, value: 1});
+    var seriesData_2 = data.mapAs({x: 0, value: 2});
+
+    // set the chart type
+    var chart = anychart.column();
+
+    // configure the main y-scale
+    var yScale1 = anychart.scales.linear();
+    yScale1.maximum(100);
+
+    // configure an extra y-scale
+    var yScale2 = anychart.scales.linear();
+    yScale2.maximum(100);
+
+    // set the title of the x-axis
+    var xAxis = chart.xAxis();
+    //xAxis.title("Manager");
+
+    // configure the main y-axis
+    //var yAxis1 = chart.yAxis(0);
+    //yAxis1.scale(yScale1);
+    //yAxis1.title("Sales, $");
+
+    // configure an extra y-axis
+    //var yAxis2 = chart.yAxis(1);
+   // yAxis2.orientation("right")
+    //yAxis2.scale(yScale2);
+    //yAxis2.title("Number of Items Sold");
+
+    // create the first series, set the data and name
+    var series1 = chart.column(seriesData_1);
+    series1.name("%");
+
+    // create the second series, set the data and name
+    var series2 = chart.line(seriesData_2);
+    series2.name("Number of Items Sold");
+
+    // bind the first series to the main y-scale
+    
+
+    // bind the second series to the extra y-scale
+    //var line2 = chart.lineMarker();
+  //line2.value(45);  
+  //line2.stroke("5 red");
+
+
+  // set the lowest line marker
+  var minMarker = chart.lineMarker(0);
+  // set marker's axis
+  minMarker.axis(chart.yAxis());
+  minMarker.value(80);
+ // minMarker.stroke("3 #0D0"); 
+
+  minMarker.stroke("#0D0", 3, "10 5", "round");
+
+  // set the highest line marker
+  var maxMarker = chart.lineMarker(1);
+  // set marker's scale
+  maxMarker.axis(chart.yAxis());
+  maxMarker.value(50);
+  maxMarker.stroke('3 #FF0000');
+
+
+  chart.labels()
+            .enabled(true)
+            .position('center-top')
+            .anchor('center-bottom')
+            .format('%{%Value}{groupsSeparator: }');
+    chart.hovered().labels(false);
+    baslik="Kilim Group "
+    // set the chart title
+    chart.title(baslik+" TQ Quick Check-Up");
+
+    // set the container id
+    chart.container("container");
+
+    // initiate drawing the chart
+    chart.draw();
+    
+});</script>
+               <font  face="helvatica" size="3" color="#0D0" align="center">
+                <div >Turquality Olması Gereken Performans</div>  
+              <hr width="15%" color="#0D0" size="3"  > 
+
+              <font  face="helvatica" size="3" color="#64b5f6" align="center">
+                <div >Mevcut Performans %</div>  
+              <hr width="10%" color="#64b5f6" size="3"  > 
+
+              <font  face="helvatica" size="3" color="#FF000" align="center">
+                <div >Ortalama</div>  
+              <hr width="7%" color="#FF000" size="3"  > 
+              
+          
+
+              
+            
+
+           
+
+            
+          
+            </body>
+</html>
