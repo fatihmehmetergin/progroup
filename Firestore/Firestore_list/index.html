@@ -1,0 +1,60 @@
+<hmtl>
+
+    <head>
+                <title>Firebase Firestore for Web</title>
+                <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700"
+                rel="stylesheet">
+             <!--   <link rel="stylesheet" href="style.css">    -->
+
+    </head>
+
+    <body>
+                <div class="main-form">
+                    <h3>Firebase Firestore</h3>
+                    <p>Welcome to Firebase Firestore Tutorial for Web  </p>
+                    <input type="text" placeholder="Enter Text here...." id="text_field">
+                    <button id="submit_btn" onclick="save()"> Giriş</button>
+
+                </div>
+
+                <div id="list_div">       
+                        <h3>User List: </h3>                   
+                </div>  
+
+                <body>
+                    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+                  
+                    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+                    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+                  
+                    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+                    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+                  
+                    <!-- Add Firebase products that you want to use -->
+                    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+                    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+                  </body>
+
+    <script>
+    // Your web app's Firebase configuration
+     var firebaseConfig = {
+    apiKey: "AIzaSyC1AUFtsuLgs0321RQQ4VA-lTMVXQ_9XZc",
+    authDomain: "checkup-32b3a.firebaseapp.com",
+    databaseURL: "https://checkup-32b3a.firebaseio.com",
+    projectId: "checkup-32b3a",
+    storageBucket: "checkup-32b3a.appspot.com",
+    messagingSenderId: "225613174812",
+    appId: "1:225613174812:web:6fe9fc8a152f85b23167d9"
+     };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>    
+
+    <script src="index.js"></script>
+
+
+    </body>
+
+
+
+</hmtl>
