@@ -8,7 +8,7 @@ function save()
     
     db.collection("firma").doc().set({
         firma_adi: firma_adi,
-        toplam_ihracaat: toplam_ihracaat,
+        toplam_ihracaat: parseInt(toplam_ihracaat),
         sektor: sektor
     })
     .then(function(docRef) {
@@ -60,6 +60,21 @@ db.collection("firma").where("toplam_ihracaat", ">", "249000").where("sektor", "
         console.log("Toplam İhracaatı>300.000$: ", cities.join(", "));
     });
 */
+
+//Sektörü tekstil olanların toplam ihracaat ortalaması
+var sayac=0;
+var toplam=0;
+db.collection("firma").where("sektor", "==", "Tekstil")
+    .onSnapshot(function(querySnapshot) {
+        var cities = [];
+        querySnapshot.forEach(function(doc) {
+          //  cities.push(doc.data().firma_adi);  
+          toplam+=doc.data().toplam_ihracaat
+          sayac++
+        });
+        console.log("Tekstil Ortalama: ",toplam/sayac);
+    });
+
 
 
 //----------------------------------------------------------------------------------------------------------
