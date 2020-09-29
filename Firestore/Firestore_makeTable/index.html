@@ -1,0 +1,99 @@
+<hmtl>
+
+    <head>
+                <title>Firebase Firestore for Web</title>
+                <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700"
+                rel="stylesheet">
+
+                <title>Bootstrap Example</title>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+             <!--   <link rel="stylesheet" href="style.css">    -->
+
+    </head>
+
+    <body>
+                <div class="main-form">
+                    <h3>Firebase Firestore</h3>
+                    <p>Welcome to Firebase Firestore Tutorial for Web  </p>
+                    <input type="text" placeholder="Firma Adı..." id="firma_adi">
+                    <input type="number" placeholder="Toplam İhracaat...."  id="toplam_ihracaat">
+                    <input type="text" placeholder="Sektör...."  id="sektor">
+                    
+                    <button id="submit_btn" onclick="save()"> Giriş</button>
+
+                </div>
+
+                <div id="list_div">       
+                        <h3>Markalar</h3>                   
+                </div>  
+
+                <body>
+                    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+                  
+                    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+                    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+                  
+                    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+                    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+                  
+                    <!-- Add Firebase products that you want to use -->
+                    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+                    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+                  </body>
+
+
+                  <select id="mySelect" onchange="myFunction()">
+                    <option>Sektöre Göre</option>
+                    <option>Tekstil</option>
+                    <option>Ulaştırma / Lojistik</option>
+                    <option>Mobilya</option>
+                  </select>
+
+                    <br></br>
+
+                  <div class="container">
+                    
+                    <table class="table" id=myTable>
+                      <thead>
+                        <tr>
+                          <th>Firma</th>
+                          <th>Toplam İhracaat</th>
+                        </tr>
+                      </thead>
+                      
+                    </table>
+                  </div>
+                 
+
+                  <br></br>
+                  
+
+                  
+    <script>
+    // Your web app's Firebase configuration
+     var firebaseConfig = {
+    apiKey: "AIzaSyC1AUFtsuLgs0321RQQ4VA-lTMVXQ_9XZc",
+    authDomain: "checkup-32b3a.firebaseapp.com",
+    databaseURL: "https://checkup-32b3a.firebaseio.com",
+    projectId: "checkup-32b3a",
+    storageBucket: "checkup-32b3a.appspot.com",
+    messagingSenderId: "225613174812",
+    appId: "1:225613174812:web:6fe9fc8a152f85b23167d9"
+     };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>    
+
+    <script src="index.js"></script>
+
+
+    </body>
+
+
+
+</hmtl>
