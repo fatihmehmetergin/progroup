@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+	
+	<input type="text" placeholder="örn:350,000" class="money form-control" id="toplam_ihracaat">
+		
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script type="text/javascript" src="simple.money.format.js"></script>
+	<script type="text/javascript">
+		$('.money').simpleMoneyFormat();
+	</script>	
+	<button onclick="myFunction()">Click Me</button>
+
+</script>
+
+<script>
+	function myFunction()
+	{
+		var a=document.getElementById("toplam_ihracaat").value
+		const sonuc = a.split(",");
+		var sonuc1=sonuc.join('')
+		toplam_ihracaat=parseInt(sonuc1)
+		console.log(toplam_ihracaat+5)
+		
+	}
+</script>
+
+
+
+</body>
+</html>
