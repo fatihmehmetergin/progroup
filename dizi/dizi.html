@@ -1,0 +1,44 @@
+<html>
+
+
+<h1 id="baslik">dfdffd</h1>
+
+<script>
+
+    let activities = 
+
+[
+    ['Dijital Dönüşüm Destekleri', 50000, 100000, 150000, 10000],
+    ['İnsan Kaynakları Desteği',"","","",50000],
+    ['Yalınlaşma', 10000,"","",""],
+    ['Mağaza Kiraları',8000,"","",""],
+    ['Araştırma',1000,"","",""]
+];
+
+    activities.push(['İhracaat',15500,45000,32000,14000]);
+
+
+    for (let i = 0; i < activities.length; i++) {
+    // get the size of the inner array
+    var innerArrayLength = activities[i].length;
+    // loop the inner array
+    for (let j = 0; j < innerArrayLength; j++) {
+        
+        document.getElementById("baslik").innerHTML="fatih mehmet ergin"
+      //  console.log('[' + i + ',' + j + '] = ' + activities[i][j]);
+    }
+
+
+    activities.forEach((activity) => {
+    activity.forEach((data) => {
+        console.log(data);
+    });
+});
+}
+
+
+</script>
+
+
+</html>
+
