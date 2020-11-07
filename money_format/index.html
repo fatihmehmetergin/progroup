@@ -1,0 +1,37 @@
+<html>
+<body>
+
+	<input id="para" onkeyup="formatMyMoney()"> </input>
+
+<script>
+
+function formatMyMoney() 
+{
+	
+	sonuc=(document.getElementById("para").value);
+	sonuc=sonuc.split(".")
+	sonuc=(sonuc.join(''));
+	 	 
+	var price=0
+
+	price=sonuc
+
+	var currency_symbol = "₺"
+  
+	var formattedOutput = new Intl.NumberFormat('tr-TR', {
+		style: 'currency',
+		currency: 'TRY',
+		minimumFractionDigits: 0,
+	  });
+	  document.getElementById("para").value=formattedOutput.format(price).replace(currency_symbol, '')
+	  console.log(formattedOutput.format(price).replace(currency_symbol, ''))
+	//return formattedOutput.format(price).replace(currency_symbol, '')	
+}
+
+	//document.getElementById("myMoney").innerHTML = formatMyMoney(35555);
+  
+  </script>
+
+</body>
+  
+</html>
